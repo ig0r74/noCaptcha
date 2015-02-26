@@ -3,7 +3,13 @@
     <title>noCAPTCHA demo: Simple page</title>
   </head>
   <body>
-    [[!FormIt? &preHooks=`preNoCaptcha` &successMessage=`Succesfull!` &hooks=`noCaptcha` &ncTheme=`light` &ncType=`image`]]
+    [[!FormIt?
+    	&preHooks=`preNoCaptcha`
+    	&hooks=`noCaptcha`
+    	&ncTheme=`light`
+    	&ncType=`image`
+    	&successMessage=`Сообщение успешно отправлено!`
+    ]]
 
 	[[+fi.successMessage]]
 	<form action="[[~[[*id]]]]" method="post">
