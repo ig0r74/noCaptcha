@@ -16,11 +16,11 @@
 	
 	//checks for errors
 	if(empty($secret_key)){
-		$hook->addError('nocaptcha','No secret or private key given for system-setting formit.recaptcha_private_key.');
+		$hook->addError('nocaptcha','Нет секретного или приватного ключа в system-setting formit.recaptcha_private_key.');
 		return false;
 	}
 	if(empty($response_string)){
-		$hook->addError('nocaptcha','No value was submitted for the captcha.');
+		$hook->addError('nocaptcha','Ниодно значение небыло представлено на капче.');
 		return false;
 	}
 	
@@ -53,26 +53,26 @@
 			foreach($resultObject->error-codes as $errorCode){
 				switch($errorCode){
 					case 'missing-input-secret':
-						$hook->addError('nocaptcha','The secret parameter is missing.');
+						$hook->addError('nocaptcha','Секретный параметр отсутствует.');
 						break;
 					case 'invalid-input-secret':
-						$hook->addError('nocaptcha','The secret parameter is invalid or malformed.');
+						$hook->addError('nocaptcha','Секретный параметр является недействительным или неправильным.');
 						break;
 					case 'missing-input-response':
-						$hook->addError('nocaptcha','The response parameter is missing.');
+						$hook->addError('nocaptcha','Параметр ответа отсутствует.');
 						break;
 					case 'invalid-input-response':
-						$hook->addError('nocaptcha','The response parameter is invalid or malformed.');
+						$hook->addError('nocaptcha','Параметр ответа неверен или неправильный.');
 						break;
 					default:
-						$hook->addError('nocaptcha','Unknown error: '.$errorCode);
+						$hook->addError('nocaptcha','Неизвестная ошибка: '.$errorCode);
 						break;
 				}
 				return false;
 			}
 		}
 	}else{
-		$hook->addError('nocaptcha','There was an error executing your request');
+		$hook->addError('nocaptcha','Возникла ошибка при выполнении вашего запроса');
 		return false;
 	}
 	
