@@ -37,7 +37,7 @@
 		$output = $modx->getChunk('nocaptcha_tpl', $placeholders);	
 	}else{
 		//display error on form
-		$output = '<pre>No public or site key given for system-setting formit.recaptcha_public_key</pre>';
+		$output = '<pre>Нет публичного ключа или site key для system-setting formit.recaptcha_public_key</pre>';
 	}
 	
 	//output to placeholder
