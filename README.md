@@ -1,5 +1,8 @@
 #noCaptcha
 
+![image](https://www.google.com/recaptcha/intro/images/hero-recaptcha-demo.gif)
+
+Описание на русском: http://weblr.ru/google-recaptcha-v2-modx-formit.html
 
 MODx FormIt hook for the new noCaptcha reCaptcha from Google.
 
